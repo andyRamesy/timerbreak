@@ -1,17 +1,13 @@
-# flutter_break
+# Timer Break
 
-A new Flutter project.
+Timer Break est un side project personnel développé pour expérimenter et approfondir l'utilisation des Streams en Flutter.
+L'objectif principal était de mettre en pratique la gestion d'un flux de données en temps réel pour piloter un système de minuterie (start, pause, reset) avec une architecture propre et réactive.
 
-## Getting Started
+Ce projet m'a permis de travailler sur :
 
-This project is a starting point for a Flutter application.
+- La gestion d'état basée sur les Streams
+- La programmation asynchrone en Dart
+- La séparation logique métier / UI
+- La gestion du cycle de vie des subscriptions
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# flutter_break
+Un projet technique orienté apprentissage, axé sur la maîtrise des mécanismes réactifs dans Flutter.

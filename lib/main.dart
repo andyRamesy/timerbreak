@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "My work breaker",
+      title: "Work breaker",
       theme: ThemeData(primarySwatch: Colors.amber),
       home: TimerHomePage(),
     );
@@ -43,7 +43,7 @@ class TimerHomePage extends StatelessWidget {
     timer.startWork();
     return Scaffold(
       appBar: AppBar(
-        title: const Text("My work breaker"),
+        title: const Text("Work breaker"),
         actions: [
           PopupMenuButton(
               itemBuilder: (BuildContext context) => menuItems.toList(),
@@ -115,7 +115,7 @@ class TimerHomePage extends StatelessWidget {
                       child: ProductivityButton(
                           color: Color(0xff212121),
                           text: "Restart",
-                          onPressed: () => timer.startTimer())),
+                          onPressed: () => timer.restart())),
                   Padding(padding: EdgeInsets.all(defaultPadding)),
                 ],
               )

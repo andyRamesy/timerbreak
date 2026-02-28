@@ -13,6 +13,7 @@ class CountDownTimer {
   Duration get time => _time;
   int shortBreak = 5;
   int longBreak = 20;
+  String _currentTimerType = 'work';
 
 //he asterisk (*) after async isused to say that a Stream is being returned
   Stream<TimerModel> stream() async* {
@@ -42,8 +43,27 @@ class CountDownTimer {
 
   void startWork() async {
     await readSettings();
+    _currentTimerType = 'work';
     _radius = 1;
     _time = Duration(minutes: work, seconds: 0);
+    _fullTime = _time;
+  }
+
+  void restart() async {
+    await readSettings();
+    _radius = 1;
+    _isActive = true;
+    switch (_currentTimerType) {
+      case 'work':
+        _time = Duration(minutes: work, seconds: 0);
+        break;
+      case 'shortBreak':
+        _time = Duration(minutes: shortBreak, seconds: 0);
+        break;
+      case 'longBreak':
+        _time = Duration(minutes: longBreak, seconds: 0);
+        break;
+    }
     _fullTime = _time;
   }
 
@@ -58,6 +78,7 @@ class CountDownTimer {
 
   void startBreak(bool isShort) async {
     await readSettings();
+    _currentTimerType = isShort ? 'shortBreak' : 'longBreak';
     _radius = 1;
     _time = Duration(minutes: (isShort) ? shortBreak : longBreak, seconds: 0);
     _fullTime = _time;
