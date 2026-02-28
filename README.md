@@ -6,13 +6,11 @@ L'objectif principal était de mettre en pratique la gestion d'un flux de donné
 Ce projet m'a permis de travailler sur :
 
 - La gestion d'état basée sur les Streams
-- La programmation asynchrone en Dart
-- La séparation logique métier / UI
 - La gestion du cycle de vie des subscriptions
 
 Un projet technique orienté apprentissage, axé sur la maîtrise des mécanismes réactifs dans Flutter.
 
-Voici quelques screenshots de l’application illustrant son fonctionnement et son interface : 
+Screenshots: Illustrant son fonctionnement et son interface : 
 
 TIMER SCREEN
 
